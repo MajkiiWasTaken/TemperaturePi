@@ -1,4 +1,4 @@
-# DS18B20 Modbus TCP Slave
+# Raspberry Pi thermometer
 
 ![Platform](https://img.shields.io/badge/Platform-Raspberry%20Pi-red) 
 ![Python](https://img.shields.io/badge/Python-3.13-blue) 
