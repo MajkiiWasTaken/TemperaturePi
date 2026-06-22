@@ -15,7 +15,7 @@ base_dir = "/sys/bus/w1/devices/"
 devices = glob.glob(base_dir + "28*")
 
 if len(devices) == 0:
-    print("Senzor DS18B20 nebyl nalezen.")
+    print("DS18B20 sensor was not found.")
     exit()
 
 device_file = devices[0] + "/w1_slave"
@@ -60,15 +60,15 @@ async def update_temperature_register():
 
             context[0].setValues(3, 100, [value])
 
-            print(f"Teplota: {temp:.2f} °C | Registr 100: {value}")
+            print(f"Temperature: {temp:.2f} °C | Register 100: {value}")
 
         await asyncio.sleep(2)
 
 async def main():
     asyncio.create_task(update_temperature_register())
 
-    print("Modbus TCP server běží na 0.0.0.0:5020")
-    print("Čti Holding Register 0, hodnota / 100 = teplota °C")
+    print("Modbus TCP server running on 0.0.0.0:5020")
+    print("Read Holding Register 0, value / 100 = temperature °C")
 
     await StartAsyncTcpServer(
         context=context,
