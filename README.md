@@ -81,4 +81,6 @@ To get the temperature value:
 temperature = register_value / 100
 ```
 
+---
+
 ### Author: Michal Švrček
