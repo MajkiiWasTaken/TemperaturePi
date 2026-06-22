@@ -9,7 +9,7 @@ This project reads temperature from a DS18B20 sensor connected to a Raspberry Pi
 
 The Raspberry Pi acts as a Modbus TCP slave (server). A Modbus master can connect to it and read the current temperature.
 
-<img width="1280" height="720" alt="temp" src="https://github.com/user-attachments/assets/422354f5-c469-44cd-a01e-d63d390a007e" />
+<img width="800" height="600" alt="temp" src="https://github.com/user-attachments/assets/422354f5-c469-44cd-a01e-d63d390a007e" />
 
 ---
 
