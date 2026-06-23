@@ -1,4 +1,4 @@
-# DS18B20 Modbus TCP Slave
+# Raspberry Pi thermometer
 
 ![Platform](https://img.shields.io/badge/Platform-Raspberry%20Pi-red) 
 ![Python](https://img.shields.io/badge/Python-3.13-blue) 
@@ -7,9 +7,9 @@
 
 This project reads temperature from a DS18B20 sensor connected to a Raspberry Pi and exposes it through Modbus TCP.
 
-The Raspberry Pi acts as a Modbus TCP slave (server). A Modbus master can connect to it and read the current temperature.
+The Raspberry Pi acts as a Modbus TCP slave. A Modbus master can connect to it and read the current temperature.
 
-![alt text](temp.gif)
+<img width="540" height="304" alt="temp" src="https://github.com/user-attachments/assets/422354f5-c469-44cd-a01e-d63d390a007e" />
 
 ---
 
@@ -21,6 +21,7 @@ The Raspberry Pi acts as a Modbus TCP slave (server). A Modbus master can connec
 
 ### Wiring
 
+```
           4.7 kΩ
 3.3V ─────/\/\/\────┐
                     │
@@ -32,6 +33,7 @@ GND  ─────────────── GND (DS18B20)
 3.3V ─────────────── VDD (DS18B20)
 
 The DS18B20 data line (DQ) must be connected to GPIO4 and pulled up to 3.3 V using a 4.7 kΩ resistor.
+```
 
 ---
 
@@ -78,5 +80,7 @@ To get the temperature value:
 ```text
 temperature = register_value / 100
 ```
+
+---
 
 ### Author: Michal Švrček
